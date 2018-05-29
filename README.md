@@ -9,7 +9,7 @@ This project provides custom data providers for use with Virtual Entities in Dyn
 
 #### Dynamics 365
 
-This data provider allows you to pull in data from another Dynamics 365 environment.  This is useful in scenarios where your organization has dedicated environments for sales and service.
+The Dynamics 365 Data Provider allows you to pull in data from another Dynamics 365 environment.  This is useful in scenarios where your organization has separate environments for sales and service.
 
 Ffiltering, sorting, and paging are fully supported.  However, linked entities are not yet supported.
 
