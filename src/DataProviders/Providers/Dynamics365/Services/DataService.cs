@@ -11,11 +11,13 @@
     public class DataService : IDataService
     {
         private readonly IOrganizationService _service;
+        private readonly ITracingService _tracing;
         private readonly Entity _dataSource;
 
-        public DataService(IOrganizationService service, Entity dataSource)
+        public DataService(IOrganizationService service, ITracingService tracing, Entity dataSource)
         {
             _service = service;
+            _tracing = tracing;
             _dataSource = dataSource;
         }
 

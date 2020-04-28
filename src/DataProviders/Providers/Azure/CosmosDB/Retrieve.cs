@@ -1,4 +1,4 @@
-﻿namespace BGuidinger.Xrm.DataProviders.Dynamics365
+﻿namespace BGuidinger.Xrm.DataProviders.CosmosDB
 {
     using Microsoft.Xrm.Sdk;
 

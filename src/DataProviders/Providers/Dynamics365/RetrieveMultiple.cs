@@ -4,9 +4,9 @@
 
     public class RetrieveMultiple : RetrieveMultipleBase
     {
-        public override IDataService GetDataService(IOrganizationService service, Entity dataSource)
+        public override IDataService GetDataService(IOrganizationService service, ITracingService tracing, Entity dataSource)
         {
-            return new DataService(service, dataSource);
+            return new DataService(service, tracing, dataSource);
         }
     }
 }

@@ -10,11 +10,12 @@
         {
             var context = serviceProvider.Get<IPluginExecutionContext>();
             var service = serviceProvider.GetOrganizationService(Guid.Empty);
+            var tracing = serviceProvider.Get<ITracingService>();
 
             var retriever = serviceProvider.Get<IEntityDataSourceRetrieverService>();
             var dataSource = retriever.RetrieveEntityDataSource();
 
-            var dataService = GetDataService(service, dataSource);
+            var dataService = GetDataService(service, tracing, dataSource);
 
             var target = context.InputParameterOrDefault<EntityReference>("Target");
 
@@ -23,6 +24,6 @@
             context.OutputParameters["BusinessEntity"] = entity;
         }
 
-        public abstract IDataService GetDataService(IOrganizationService service, Entity dataSource);
+        public abstract IDataService GetDataService(IOrganizationService service, ITracingService tracing, Entity dataSource);
     }
 }
