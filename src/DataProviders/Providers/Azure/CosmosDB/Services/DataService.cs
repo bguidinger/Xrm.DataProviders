@@ -59,6 +59,7 @@
             var uri = _dataSource.GetAttributeValue<string>("bg_uri");
             var key = _dataSource.GetAttributeValue<string>("bg_key");
             var database = _dataSource.GetAttributeValue<string>("bg_database");
+            var crossParitionQuery = _dataSource.GetAttributeValue<bool>("bg_enablecrosspartitionquery");
             var collection = metadata.ExternalName;
 
             var date = DateTime.UtcNow.ToString("R");
@@ -75,6 +76,10 @@
             request.Headers.Add("X-MS-Date", date);
             request.Headers.Add("X-MS-Version", "2017-02-22");
             request.Headers.Add("X-MS-DocumentDB-IsQuery", "True");
+            if (crossParitionQuery)
+            {
+                request.Headers.Add("X-MS-DocumentDB-Query-EnableCrossPartition", "True");
+            }
 
             var body = Encoding.UTF8.GetBytes($"{{\"query\": \"{query}\"}}");
             using (var stream = request.GetRequestStream())
@@ -82,37 +87,53 @@
                 stream.Write(body, 0, body.Length);
             }
 
-            using (var response = request.GetResponse())
-            using (var stream = response.GetResponseStream())
+            Records records;
+            try
             {
-                var mapper = EntityMapFactory.Create(metadata, new DefaultTypeMapFactory(), null);
-
-                var settings = new DataContractJsonSerializerSettings()
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
                 {
-                    UseSimpleDictionaryFormat = true
-                };
-                var serializer = new DataContractJsonSerializer(typeof(Records), settings);
-
-                var records = serializer.ReadObject(stream) as Records;
-                foreach (var record in records.Documents)
-                {
-                    var entityId = record[mapper.MapAttributeNameExternal(metadata.PrimaryIdAttribute)];
-                    var entity = new Entity(metadata.LogicalName, new Guid(entityId.ToString()));
-
-                    foreach (var attribute in metadata.Attributes)
+                    var settings = new DataContractJsonSerializerSettings()
                     {
-                        _tracing.Trace("Attribute: " + attribute.LogicalName);
-                        var logicalName = attribute.LogicalName;
-                        var externalName = mapper.MapAttributeNameExternal(logicalName);
+                        UseSimpleDictionaryFormat = true
+                    };
+                    var serializer = new DataContractJsonSerializer(typeof(Records), settings);
 
-                        if (record.ContainsKey(externalName))
-                        {
-                            entity[logicalName] = record[externalName];
-                        }
-                    }
-
-                    yield return entity;
+                    records = serializer.ReadObject(stream) as Records;
                 }
+            }
+            catch (WebException ex)
+            {
+                using (var stream = ex.Response.GetResponseStream())
+                using (var reader = new StreamReader(stream))
+                {
+                    var error = reader.ReadToEnd();
+
+                    _tracing.Trace(error);
+
+                    throw;
+                }
+            }
+
+            var mapper = EntityMapFactory.Create(metadata, new DefaultTypeMapFactory(), null);
+            foreach (var record in records.Documents)
+            {
+                var entityId = record[mapper.MapAttributeNameExternal(metadata.PrimaryIdAttribute)];
+                var entity = new Entity(metadata.LogicalName, new Guid(entityId.ToString()));
+
+                foreach (var attribute in metadata.Attributes)
+                {
+                    _tracing.Trace("Attribute: " + attribute.LogicalName);
+                    var logicalName = attribute.LogicalName;
+                    var externalName = mapper.MapAttributeNameExternal(logicalName);
+
+                    if (record.ContainsKey(externalName))
+                    {
+                        entity[logicalName] = record[externalName];
+                    }
+                }
+
+                yield return entity;
             }
         }
 

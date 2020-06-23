@@ -4,6 +4,10 @@
     <TargetFramework>net462</TargetFramework>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>BGuidinger.Xrm.DataProviders</AssemblyName>
+    <RootNamespace>BGuidinger.Xrm.DataProviders</RootNamespace>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
