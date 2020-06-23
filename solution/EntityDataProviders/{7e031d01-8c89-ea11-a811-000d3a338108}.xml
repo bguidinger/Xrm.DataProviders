@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityDataProviderId>{7e031d01-8c89-ea11-a811-000d3a338108}</EntityDataProviderId>
+  <Name>Azure Cosmos DB Data Provider</Name>
+  <DataSourceLogicalName>bg_datasource_azurecosmosdb</DataSourceLogicalName>
+  <IsCustomizable>1</IsCustomizable>
+  <RetrievePluginTypeId>a5858ba9-8026-4e58-bb56-4de10d19efcf</RetrievePluginTypeId>
+  <RetrieveMultiplePluginTypeId>f1ce43ff-867e-4dd4-bee0-da2d81024350</RetrieveMultiplePluginTypeId>
+</EntityDataProvider>

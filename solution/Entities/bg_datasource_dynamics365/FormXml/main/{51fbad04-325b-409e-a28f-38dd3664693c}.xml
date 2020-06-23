@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{51fbad04-325b-409e-a28f-38dd3664693c}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{fb84b242-a6ef-4de0-988c-1773733b46a8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4c5fb3d7-63ca-4ecc-8de1-501f93d03770}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3af172b3-9e98-4957-b357-b35e0cfdc9eb}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="bg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a92ae9d-ea4b-3a50-1075-ee30605340d5}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Resource" languagecode="1033" />
+                        </labels>
+                        <control id="bg_resource" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_resource" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b653513c-cc3e-494d-6abb-c868b7ed4223}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Username" languagecode="1033" />
+                        </labels>
+                        <control id="bg_username" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_username" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{954c3ec2-9cdc-3a3d-e4ce-88bc234c6135}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Password" languagecode="1033" />
+                        </labels>
+                        <control id="bg_password" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_password" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

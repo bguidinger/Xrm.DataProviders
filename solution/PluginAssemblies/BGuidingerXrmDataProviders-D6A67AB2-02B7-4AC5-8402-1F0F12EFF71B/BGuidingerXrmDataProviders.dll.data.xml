@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="BGuidinger.Xrm.DataProviders, Version=1.0.0.2, Culture=neutral, PublicKeyToken=065b4c1000404bb6" PluginAssemblyId="d6a67ab2-02b7-4ac5-8402-1f0f12eff71b" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/BGuidingerXrmDataProviders-D6A67AB2-02B7-4AC5-8402-1F0F12EFF71B/BGuidingerXrmDataProviders.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="BGuidinger.Xrm.DataProviders.CosmosDB.Retrieve, BGuidinger.Xrm.DataProviders, Version=1.0.0.2, Culture=neutral, PublicKeyToken=065b4c1000404bb6" PluginTypeId="a5858ba9-8026-4e58-bb56-4de10d19efcf" Name="BGuidinger.Xrm.DataProviders.CosmosDB.Retrieve">
+      <FriendlyName>834c5401-afd7-46aa-9375-983cecc632ae</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="BGuidinger.Xrm.DataProviders.CosmosDB.RetrieveMultiple, BGuidinger.Xrm.DataProviders, Version=1.0.0.2, Culture=neutral, PublicKeyToken=065b4c1000404bb6" PluginTypeId="f1ce43ff-867e-4dd4-bee0-da2d81024350" Name="BGuidinger.Xrm.DataProviders.CosmosDB.RetrieveMultiple">
+      <FriendlyName>bff5a72c-914d-4a02-997a-79a30ceb4b8f</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="BGuidinger.Xrm.DataProviders.Dynamics365.Retrieve, BGuidinger.Xrm.DataProviders, Version=1.0.0.2, Culture=neutral, PublicKeyToken=065b4c1000404bb6" PluginTypeId="7ad66e40-1557-4a53-933c-a63e4a3f0315" Name="BGuidinger.Xrm.DataProviders.Dynamics365.Retrieve">
+      <FriendlyName>158c2612-38f8-4de7-9b5c-47b301d46132</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="BGuidinger.Xrm.DataProviders.Dynamics365.RetrieveMultiple, BGuidinger.Xrm.DataProviders, Version=1.0.0.2, Culture=neutral, PublicKeyToken=065b4c1000404bb6" PluginTypeId="9ceec7c8-3881-466d-83fc-b5937a28c89f" Name="BGuidinger.Xrm.DataProviders.Dynamics365.RetrieveMultiple">
+      <FriendlyName>37cd3881-3f89-4fe8-966b-c6f3f14bee2d</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

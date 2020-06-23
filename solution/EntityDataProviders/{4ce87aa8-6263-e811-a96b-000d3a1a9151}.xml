@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityDataProviderId>{4ce87aa8-6263-e811-a96b-000d3a1a9151}</EntityDataProviderId>
+  <Name>Dynamics 365 Data Provider</Name>
+  <DataSourceLogicalName>bg_datasource_dynamics365</DataSourceLogicalName>
+  <IsCustomizable>1</IsCustomizable>
+  <RetrievePluginTypeId>7ad66e40-1557-4a53-933c-a63e4a3f0315</RetrievePluginTypeId>
+  <RetrieveMultiplePluginTypeId>9ceec7c8-3881-466d-83fc-b5937a28c89f</RetrieveMultiplePluginTypeId>
+</EntityDataProvider>

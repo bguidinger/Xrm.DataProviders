@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{ea579b82-eafa-4f77-9590-624364cd9e33}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{52d7aacc-85f7-4c5f-8b07-1f9cf791ea78}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{25b7d33a-029d-49a3-b5bd-0dc2a6548eda}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4d366757-7c8b-48bc-a06c-a79d1ad54fcc}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="bg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{29895ba4-e61d-c487-583d-6b2da15db19b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="URI" languagecode="1033" />
+                        </labels>
+                        <control id="bg_uri" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_uri" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e2601ac-abc5-2669-0127-8b243910d212}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Master Key" languagecode="1033" />
+                        </labels>
+                        <control id="bg_key" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_key" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a4763207-d060-4699-143e-d4e82e1b51d8}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Database" languagecode="1033" />
+                        </labels>
+                        <control id="bg_database" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="bg_database" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d1289f3-e8a4-4176-8074-4891892ec49d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Enable Cross Partition Query" languagecode="1033" />
+                        </labels>
+                        <control id="bg_enablecrosspartitionquery" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="bg_enablecrosspartitionquery" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <header id="{bb69fc87-750c-4196-b988-6b8dfd6d005f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{100bd73c-c083-42c7-a61d-2e3b7c5493f6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4ddfbda3-3e9d-4fef-acd0-f457eb66cca9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b9023240-4087-4345-92c8-abd7cf3aace3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{1066d034-d467-4054-af6e-c1671ed52105}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{59202989-b9d6-4850-b8d6-3fab86061298}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{600c7b73-e735-4c55-b6e3-51b46ff02171}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{40fffdea-756d-4b7f-8b56-c08dc40cf339}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
